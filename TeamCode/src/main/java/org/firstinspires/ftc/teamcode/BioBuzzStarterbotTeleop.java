@@ -21,6 +21,7 @@
  */
 
 
+
 package org.firstinspires.ftc.teamcode;
 
 import static com.qualcomm.robotcore.hardware.DcMotor.ZeroPowerBehavior.BRAKE;
@@ -262,7 +263,7 @@ public class BioBuzzStarterbotTeleop extends OpMode {
          * spinning fast enough to make a successful shot. If it is, then we will turn on the
          * windmill servo to start feeding the elements into the launcher motor. We also
          * add some power to the intake power. This can sometimes help dislodge stuck elements from
-         * inside the hopper.
+         * inside the hopper. SideNote original paramaters: Intake power was = 0.5 and setPower(1)
          */
         if (gamepad1.right_bumper && launcher.getVelocity() > LAUNCHER_MIN_VELOCITY) {
             windmillServo.setPower(1);
